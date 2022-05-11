@@ -1,5 +1,6 @@
-#include "node.h"
 // MyList class inherits from Node.
+// This file contains MyList class.
+#include "node.h"
 // Each class should get its own template<>
 template<typename T, typename E>
 
