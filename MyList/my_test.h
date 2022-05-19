@@ -24,7 +24,7 @@ void test_complex() {
 		cout << ar[i] << endl;
 		i++;
 	}
-	// how do I get holidays data into 'n'? Use setArray(E* ot, unsigned size)
+	// how do I get holidays data into 'n'? Use deepCopy method.
 	Node<vector<vector<double>>, string>* n = new Node<vector<vector<double>>, string>();
 
 	n->deepCopy(ar, size);
