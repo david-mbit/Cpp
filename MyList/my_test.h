@@ -8,7 +8,7 @@ void test_complex() {
 	vector<vector<double>> u = {};
 	// the setup should be four copies of v inside u and an array
 	for (unsigned i = 0; i <= 3; i++) {
-			u.push_back(v);
+		u.push_back(v);
 	}
 
 	vector<string> holidays = {"Christmas", "Thanksgiving", "New Years", "Halloween", "Valentines", "Veterans Day", "Labor Day", "Independence Day"};
