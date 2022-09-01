@@ -12,15 +12,15 @@ class MyList : public Node<T, E> {
  public:
     MyList() {
 		cout << "constructor called" << endl;
-      head = tail = nullptr;
+    	head = tail = nullptr;
 		size = 0;
     }
 
 	void clear() {
-		 cout << "MyList clear" << endl;
+		cout << "MyList clear" << endl;
         Node<T, E>* prev = nullptr;
         while (head != nullptr) {
-            prev = head;
+        	prev = head;
             head = head->getNext();
             // cout << "Deleting node " << prev->getValue() << endl;
             delete prev;
