@@ -18,8 +18,8 @@ class MyList : public Node<T, E> {
 
 	void clear() {
 		out << "MyList clear" << endl;	// debugging
-        Node<T, E>* prev = nullptr;
-        while (head != nullptr) {
+		Node<T, E>* prev = nullptr;
+		while (head != nullptr) {
         	prev = head;
             head = head->getNext();
             // cout << "Deleting node " << prev->getValue() << endl;
