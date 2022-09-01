@@ -11,9 +11,9 @@ class MyList : public Node<T, E> {
     int size;	// shows how many Nodes
  public:
     MyList() {
-	cout << "constructor called" << endl;	// debugging
+		cout << "constructor called" << endl;	// debugging
     	head = tail = nullptr;
-	size = 0;
+		size = 0;
     }
 
 	void clear() {
