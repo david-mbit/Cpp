@@ -4,37 +4,34 @@
 #include <vector>
 
 using namespace std;
-// namespace has to go before template<>
-// Node class that is doubly linked.
-// The MyList class functions can handle primitive types.
+// Node class for the doubly linked list.
+// The MyList class functions can handle primitive types. And, data structures apparently.
 // <Typename T> works also
-// I could make the Node handle string by doing array of chars
-// how do I make a template for T value and T* hs?
 // Two templates allow for different types. E.g. int value and char* hs.
-// One thing I can add is make E* hs to be a class. E.g. myClass* hs and let the class contain an array.
+// One thing I can add is make E* hs to be a class. E.g. myClass hs and let the class contain an array.
 template <typename T, typename E> 
 
 class Node {
  private:
-	int size;	// size of the array "hs"
-	// int capacity;	// default constructor has 10 memory spots
+    int size;	// size of the array "hs"
+    // int capacity;	// #fix the default array size is 10 but I can make it expand.
     T value;
     Node* next;
     Node* prev;
-    E* hs;	// all I need to declare is a pointer variable for a dynamic C array on the heap.
+    E* hs;	// C array
  public:
+	// default constructor
     Node() {
-        next = nullptr;
+    	next = nullptr;
         prev = nullptr;
 		hs = new E[10];
 		for (int i = 0; i <= 9; i++) {
-				hs[i] = E();
+			hs[i] = E();
 		}
 		size = 10;
 		value = T();
     }
-    // parameterized constructor
-	// makes a deep copy of array 'ot' and stores in 'hs'
+	// parameterized constructor that makes a deep copy of array 'ot' and stores in 'hs'. Not a shallow copy.
 	Node(T value, E* ot, unsigned size) {
 		this->value = value;
 		next = nullptr;
@@ -46,7 +43,7 @@ class Node {
 		}
 		this->size = size;
 	}
-	// parameterized constructor. The default has a size 10 array.
+	// parameterized constructor and the array has size 10.
     Node(T value) {
         this->value = value;
         next = nullptr;
@@ -54,19 +51,19 @@ class Node {
         hs = new E[10];
 		// set default value for each element
         for (unsigned i = 0; i <= 9; i++) {
-				hs[i] = E();
+			hs[i] = E();
 		}
     }
 	// used for destructor
     void clear() {
-		cout << "Node clear" << endl;
-		delete[] hs;
-		next = nullptr;
+		cout << "Node clear" << endl;	// for debugging
+		delete[] hs;	// free the heap
+		next = nullptr;		// avoiding dangling pointers
 		prev = nullptr;
 		size = 0;
 		value = T();
 	}
-    
+
     virtual ~Node() {
 		clear();
 	}
@@ -88,16 +85,16 @@ class Node {
 		this->size = size;
 
 		for (unsigned i = 0; i <= size - 1; i++) {
-				hs[i] = ot[i];
+			hs[i] = ot[i];
 		}
 	}
 	// Makes a shallow copy of hs array.
 	void shallowCopy(E* ot, unsigned size) {
-			delete[] hs;
+		delete[] hs;
 
-			hs = ot;
+		hs = ot;
 
-			this->size = size;
+		this->size = size;
 	}
 
 	// Allows the user to input an array for hs data member
@@ -113,7 +110,7 @@ class Node {
 
 		cout << hs[size - 1] << endl;
 	}
-	// return the address of the first element
+	// return the address of the first element.
 	E* getArray() {
 		return hs;
 	}
@@ -125,8 +122,7 @@ class Node {
     Node* getNext() {
         return next;
     }
-    // Sets the parameter, used for linking.
-    // e.g. myNode.setNext(newNode) means myNode links to newNode
+    // Sets the parameter, used for linking. E.g. myNode.setNext(newNode) means myNode links to newNode.
     void setNext(Node* cur) {
         next = cur;
     }
@@ -140,7 +136,7 @@ class Node {
         //}
         return value;
     }
-    
+
     void setValue(T value) {
 		this->value = value;
 	}
