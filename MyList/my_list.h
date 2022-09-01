@@ -31,7 +31,7 @@ class MyList : public Node<T, E> {
 	}
 
 	virtual ~MyList() {
-       clear();
+		clear();
     }
     // Used for adding Nodes to the list.
     // I should add insertAtEnd(Node<T> n)
