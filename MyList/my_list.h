@@ -30,7 +30,7 @@ class MyList : public Node<T, E> {
 		head = tail = nullptr;
 	}
 
-    virtual ~MyList() {
+	virtual ~MyList() {
        clear();
     }
     // Used for adding Nodes to the list.
