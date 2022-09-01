@@ -1,4 +1,4 @@
-// Author DM Spring 2022.
+// Author DM Spring 2022
 // This program contains a list class that is implemented using a doubly linked list.
 // Additionally, each Node has a C-array using dynamic memory.
 // #fixme I should use proper folder guidelines.
