@@ -14,7 +14,7 @@ void test_complex() {
 	vector<string> holidays = {"Christmas", "Thanksgiving", "New Years", "Halloween", "Valentines", "Veterans Day", "Labor Day", "Independence Day"};
 
 	int size = holidays.size();
-	
+
 	string* ar = new string[ size ];
 
 	int i = 0;
