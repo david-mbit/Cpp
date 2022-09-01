@@ -20,14 +20,14 @@ class MyList : public Node<T, E> {
 		out << "MyList clear" << endl;	// debugging
 		Node<T, E>* prev = nullptr;
 		while (head != nullptr) {
-        	prev = head;
-            head = head->getNext();
-            // cout << "Deleting node " << prev->getValue() << endl;
-            delete prev;
-            size--;
+			prev = head;
+			head = head->getNext();
+			// cout << "Deleting node " << prev->getValue() << endl;
+			delete prev;
+			size--;
         }
-        // Avoiding dangling pointers
-        head = tail = nullptr;
+		// Avoiding dangling pointers
+		head = tail = nullptr;
 	}
 
     virtual ~MyList() {
