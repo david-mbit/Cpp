@@ -5,12 +5,12 @@
 #include "my_test.h"
 
 int main() {
-    //test_clear();
-    //test_printArray();
-    //test_constructor();
-    //test_list_constructor();
-    //test_insertAtEnd();
-    //test_char_array();
+	//test_clear();
+	//test_printArray();
+	//test_constructor();
+	//test_list_constructor();
+	//test_insertAtEnd();
+	//test_char_array();
 	//test_vector();
 	//test_getArrayValue();
 	//test_shallowCopy();
