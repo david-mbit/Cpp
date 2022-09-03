@@ -1,4 +1,4 @@
-// This file contains MyList class. MyList inherits from Node.
+// This file contains MyList class which is a doubly linked list. MyList inherits from Node.
 #include "node.h"
 // Each class should get its own template<>
 template<typename T, typename E>
